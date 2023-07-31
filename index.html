@@ -9,27 +9,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
-</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <body>
     <form class="control" action="#" method="post">
         <h1>FeedBack Form</h1>
-        <div>
+        <div class="lines">
             <label for="name">Name:</label>
-            <input type="text" placeholder="Enter Name">
+            <input type="text" id="name" placeholder="Enter Name" autofocus>
         </div>
-        <div>
+        <div class="lines">
             <label for="item">Pastry:</label>
-            <input type="text" placeholder="Enter pastry item">
+            <input type="text" id="item" placeholder="Enter pastry item">
         </div>
-        <div>
-            <label for="rating">Rating:</label>
-            <input type="radio" name="" id="">
-            <input type="radio" name="" id="">
-            <input type="radio" name="" id="">
+        <div class="rating">
+            <div class="star">
+                
+                <input type="radio" name="clr">
+                <input type="radio" name="clr">
+                <input type="radio" name="clr">
+                <input type="radio" name="clr">
+                <input type="radio" name="clr">
+            </div>
         </div>
          <div>
             <label for="review">Leave a message:</label>
-            <input type="text">
+            <!--<textarea name="" id="review" cols="10" rows="10"></textarea>-->
          </div>
          <button type="submit">submit feedback!</button>
     </form>
