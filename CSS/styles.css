@@ -6,15 +6,80 @@
 html{
     font-size: 62.5%;
 }
+*,*::before,*::after{
+    box-sizing: border-box;
+}
 body{
     font-family: 'Merriweather', serif, Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
     background: var(--color-secondary);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.control{
+    max-width: 300px;
+    text-align: center;
+    width: 100%;
+}
+.lines{
+    margin: 2rem;
+}
+.lines label,.rating{
+    text-transform: uppercase;
+}
+.lines input{
+    padding: .75rem;
+    outline: 0;
+    background: rgba(111,114,117,.01);
+    border: 3px solid var(--color-primary);
+    border-radius: 1rem;
+    transition: box-shadow .2s;
+}
+.lines input:hover{
+    box-shadow: 0 0 0 2px var(--color-primary);
+}
+.rating{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
 }
-
-
+.rname{
+    margin: 1rem;
+}
+.star{
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 2.5rem 2.5rem;
+    border: 3px solid #000;
+    border-radius: 1rem;
+    gap: 4.5rem;
+}
+.star input{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: .5rem;
+    height: .5rem;
+    cursor: pointer;
+    appearance: none;
+}
+.star input::before{
+    content: '\f006';
+    position: absolute;
+    font-family: fontAwesome;
+    font-size: 5rem;
+    color: #000;
+    transition: .5s;
+}
+.star input:hover ~ input::before,
+.star input:hover::before,
+.star input:checked ~ input::before,
+.star input:checked::before{
+    content: "\f005";
+    color: var(--color-primary);
+}
 /*shirt color blue*/
