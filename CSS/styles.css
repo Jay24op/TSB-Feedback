@@ -24,21 +24,24 @@ body{
     width: 100%;
 }
 .lines{
-    margin: 2rem;
+    margin: 1.75rem;
 }
-.lines label,.rating{
+.lines label,.rating,.btn{
     text-transform: uppercase;
+    font-weight: 700;
 }
 .lines input{
-    padding: .75rem;
+    padding: 1rem;
+    width: 100%;
     outline: 0;
     background: rgba(111,114,117,.01);
-    border: 3px solid var(--color-primary);
+    border: 3px solid;
     border-radius: 1rem;
+    outline: 0;
     transition: box-shadow .2s;
 }
 .lines input:hover{
-    box-shadow: 0 0 0 2px var(--color-primary);
+    box-shadow: 0 0 0 2px;
 }
 .rating{
     display: flex;
@@ -52,15 +55,15 @@ body{
     padding: 2.5rem 2.5rem;
     border: 3px solid #000;
     border-radius: 1rem;
-    gap: 4.5rem;
+    gap: 5rem;
 }
 .star input{
     display: flex;
     position: relative;
     align-items: center;
     justify-content: center;
-    width: .5rem;
-    height: .5rem;
+    width: .25rem;
+    height: .25rem;
     cursor: pointer;
     appearance: none;
 }
@@ -68,7 +71,7 @@ body{
     content: '\f006';
     position: absolute;
     font-family: fontAwesome;
-    font-size: 5rem;
+    font-size: 4rem;
     color: #000;
     transition: .5s;
 }
@@ -80,16 +83,19 @@ body{
     color: var(--color-primary);
 }
 .message{
+    font-weight: bold;
     background: rgba(111,114,117,.01);
     border: 2px solid var(--color-accent);
     border-radius: 1rem;
     padding: 1.5rem;
-    line-height: 1rem;
-    width: 95%;
-    height: 15rem;
+    line-height: 1.75rem;
+    width: 100%;
+    height: 5rem;
+    min-height: 5rem;
+    max-height: 30rem;
     outline: 0;
-    overflow: hidden;
-    resize: none;
+    overflow: auto;
+    resize: vertical;
     transition: all 0.2s;
 }
 .message:hover{
@@ -98,5 +104,15 @@ body{
 }
 .message:focus{
     cursor: text;
+}
+.btn{
+    width: 100%;
+    background: var(--color-primary);
+    padding: 1.25rem;
+    border: 0;
+    border-radius: 2rem;
+}
+.btn:hover{
+    background: linear-gradient(20deg,hotpink 25%,magenta);
 }
 /*shirt color blue*/
