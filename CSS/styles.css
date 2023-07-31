@@ -45,9 +45,6 @@ body{
     align-items: center;
     justify-content: center;
 }
-.rname{
-    margin: 1rem;
-}
 .star{
     position: relative;
     display: flex;
@@ -81,5 +78,25 @@ body{
 .star input:checked::before{
     content: "\f005";
     color: var(--color-primary);
+}
+.message{
+    background: rgba(111,114,117,.01);
+    border: 2px solid var(--color-accent);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    line-height: 1rem;
+    width: 95%;
+    height: 15rem;
+    outline: 0;
+    overflow: hidden;
+    resize: none;
+    transition: all 0.2s;
+}
+.message:hover{
+    cursor: pointer;
+    box-shadow: 0 0 0 2px var(--color-accent);
+}
+.message:focus{
+    cursor: text;
 }
 /*shirt color blue*/
